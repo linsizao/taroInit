@@ -1,3 +1,6 @@
+// eslint-disable-next-line import/no-commonjs
+const path = require('path')
+
 const config = {
   projectName: 'taorInit',
   date: '2019-10-7',
@@ -5,10 +8,15 @@ const config = {
   deviceRatio: {
     '640': 2.34 / 2,
     '750': 1,
-    '828': 1.81 / 2
+    '828': 1.81 / 2,
+    '1024': 1.46 / 2,
+    '1920': 0.78 / 2,
   },
   sourceRoot: 'src',
   outputRoot: 'dist',
+  alias: {
+    '@': path.join(__dirname, '../src'),
+  },
   plugins: {
     babel: {
       sourceMap: true,
